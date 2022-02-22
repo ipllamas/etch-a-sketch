@@ -15,3 +15,13 @@ for (let i=0; i<16; i++) {
     div.appendChild(divCell);
   }
 }
+
+const cells = document.querySelectorAll('.cell');
+cells.forEach((cell) => cell.addEventListener('mouseover', hoverOver));
+
+
+function hoverOver(e){
+  const cell = e.target;
+  console.log(cell);
+  cell.classList.add('hover');
+}
